@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FAMEDIC - Detalle enfermedad</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/detalle-enfermedades.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="anonymous"
+        />
+        <link
+            rel="icon"
+            href="img/logo-favicon.png"
+            type="image/png"
+            sizes="16x16"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header id="inicio" class="header-content">
+            <div>
+                <img
+                    src="./img/logo-blanco.png"
+                    alt="logo-web"
+                    class="header-img"
+                />
+                <input
+                    list="search"
+                    placeholder="Ingrese la enfermedad..."
+                    autofocus
+                    autocomplete="off"
+                />
+                <datalist id="search">
+                    <option value="Coronavirus"></option>
+                    <option value="Resfriado com&uacute;n"></option>
+                    <option value="Influenza"></option>
+                    <option value="Sarampi&oacute;n"></option>
+                    <option value="Varicela"></option>
+                </datalist>
+
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+        <nav class="nav-bar">
+            <ul>
+                <li class="nav-bar-menu">
+                    <span class="close-nav-bar">X</span>
+                    <i class="fas fa-bars"></i>
+                </li>
+                <li class="nav-bar-li ocultar">
+                    <a href="index.html">HOME</a>
+                </li>
+                <li class="nav-bar-li ocultar">
+                    <a href="listado-enfermedades.html">ENFERMEDADES</a>
+                </li>
+                <li class="nav-bar-li ocultar">
+                    <a href="vacunas.html">VACUNACI&oacute;N</a>
+                </li>
+                <li class="nav-bar-li ocultar">
+                    <a href="mapa.html">HOSPITALES</a>
+                </li>
+                <li class="nav-bar-li ocultar">
+                    <a href="contacto.html">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="container">
+            <section class="btn-volver">
+                <a href="listado-enfermedades.html">
+                    <button>
+                        <i class="fas fa-arrow-left"></i>
+                        Volver a listado de enfermedades
+                    </button>
+                </a>
+            </section>
+            <section class="detalles-title">
+                <h1>COVID-19</h1>
+                <article class="img-text-content">
+                    <div class="two-col">
+                        <img src="img/covid-19.jpg" alt="covid-19" />
+                    </div>
+                    <div class="two-col">
+                        <p>
+                            También conocida como enfermedad por coronavirus e
+                            incorrectamente como neumonía por coronavirus,nota​
+                            es una enfermedad infecciosa causada por el virus
+                            SARS-CoV-2.
+                            <br />
+                            Produce síntomas similares a los de la gripe o
+                            catarro, entre los que se incluyen fiebre, tos
+                            ,disnea, mialgia y fatiga. En casos graves se
+                            caracteriza por producir neumonía, síndrome de
+                            dificultad respiratoria aguda,sepsi​ y choque
+                            séptico que conduce a cerca de 3,75 % de los
+                            infectados a la muerte según la OMS.​ No existe
+                            tratamiento específico; las medidas terapéuticas
+                            principales consisten en aliviar los síntomas y
+                            mantener las funciones vitales.
+                            <br />
+                            La transmisión del SARS-CoV-2 se produce mediante
+                            pequeñas gotas —microgotas de Flügge​— que se emiten
+                            al hablar, estornudar, toser o espirar, que al ser
+                            despedidas por un portador (que puede no tener
+                            síntomas de la enfermedad o estar incubándola) pasan
+                            directamente a otra persona mediante la inhalación,
+                            o quedan sobre los objetos y superficies que rodean
+                            al emisor, y luego, a través de las manos, que lo
+                            recogen del ambiente contaminado, toman contacto con
+                            las membranas mucosas orales, nasales y oculares, al
+                            tocarse la boca, la nariz o los ojos.
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <div class="detail-subtitle">
+                <h3>
+                    formulario de detecci&oacute; (test) de coronavirus
+                    (covid-19)
+                </h3>
+            </div>
+            <div id="mensaje-exito" class="mensaje-exito ocultar">
+                <p></p>
+            </div>
+            <br />
+            <br />
+            <br />
+            <section class="form-content">
+                <article class="form-left">
+                    <p class="form-left-text">
+                        Hola usuario! Si tienes síntomas de
+                        <strong>COVID-19</strong> o has estado en contacto con
+                        una persona afectada deberías hacer un control y
+                        seguimiento diario de tus síntomas. Esta aplicación te
+                        permitirá hacer un seguimiento de la evolución de los
+                        síntomas y te dará las indicaciones y consejos a seguir
+                        en cada caso. El uso de este servicio supone la
+                        aceptación de los términos y la política de privacidad
+                        descritos en 'Ver las condiciones y políticas
+                    </p>
+                    <h4>s&iacute;ntomas</h4>
+                    <article class="form-img">
+                        <img
+                            src="img/24-fiebre-dolor-garganta.png"
+                            alt="fiebre-dolor-garganta"
+                        />
+                        <img
+                            src="img/25-fiebre-dificultad-respirar.png"
+                            alt="fiebre-dificultad-respirar"
+                        />
+                    </article>
+                    <article class="form-img">
+                        <img src="img/23-fiebre-tos.png" alt="fiebre-tos" />
+                    </article>
+                </article>
+                <article class="form-right">
+                    <form
+                        action="/detalle-enfermedades.html"
+                        onsubmit="return ValidarFormularioEnfermedades()"
+                        name="detalle-enfermedades"
+                        id="detalle-enfermedades"
+                    >
+                        <div class="campos-obligatorios">
+                            <p>Los campos con '(*)' son OBLIGATORIOS</p>
+                        </div>
+                        <label for="nombre-apellido" class="form-label"
+                            >(*) Nombre y Apellido</label
+                        ><br />
+                        <input
+                            type="text"
+                            name="nombre-apellido"
+                            id="nombre-apellido"
+                            autocomplete="off"
+                            class="input-100 campoParaVaciar"
+                        />
+                        <span class="errorMessage" id="errorNombre"></span>
+
+                        <div class="form-group">
+                            <div>
+                                <label for="dni" class="form-label"
+                                    >(*) DNI</label
+                                ><br />
+                                <input
+                                    type="number"
+                                    name="dni"
+                                    id="dni"
+                                    autocomplete="off"
+                                    class="input-50 campoParaVaciar"
+                                />
+                                <span class="errorMessage" id="errorDNI"></span>
+                                <br />
+                            </div>
+                            <div>
+                                <label for="telefono" class="form-label"
+                                    >(*) Tel&eacute;fono</label
+                                ><br />
+                                <input
+                                    type="text"
+                                    name="telefono"
+                                    id="telefono"
+                                    autocomplete="off"
+                                    class="input-50 campoParaVaciar"
+                                />
+                                <span
+                                    class="errorMessage"
+                                    id="errorTelefono"
+                                ></span>
+                                <br /><br />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <label for="city" class="form-label"
+                                    >(*) Ciudad</label
+                                ><br />
+                                <input
+                                    type="text"
+                                    name="city"
+                                    id="city"
+                                    autocomplete="off"
+                                    class="input-50 campoParaVaciar"
+                                />
+                            </div>
+                            <div class="form-gender">
+                                <span class="form-label">Sexo</span>
+                                <br />
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    id="male"
+                                    value="male"
+                                />
+                                <label for="male">M</label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    id="female"
+                                    value="female"
+                                />
+                                <label for="female">F</label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    id="other"
+                                    value="other"
+                                    checked
+                                />
+                                <label for="other">Otro</label>
+                            </div>
+                        </div>
+                        <br /><br />
+                        <span
+                            >¿Has viajado al exterior de la Rep&uacute;blica
+                            Argentina?</span
+                        >
+                        <input
+                            type="radio"
+                            name="travell"
+                            id="travellTrue"
+                            value="true"
+                            onchange="mostarCampo('countryVisited', 'countryVisited')"
+                        />
+                        <label for="travellTrue">Si</label>
+                        <input
+                            type="radio"
+                            name="travell"
+                            id="travellFalse"
+                            value="false"
+                            onchange="ocultarCampo('countryVisited', 'countryVisited')"
+                        />
+                        <label for="travellFalse">No</label><br /><br />
+                        <br />
+                        <label for="countryVisited" class="form-label ocultar"
+                            >Pa&iacute;ses visitados</label
+                        >
+                        <input
+                            list="countryVisited"
+                            id="countryVisited"
+                            autofocus
+                            autocomplete="off"
+                            class="input-100 ocultar"
+                        />
+                        <datalist id="countryVisited">
+                            <option value="Brasil"></option>
+                            <option value="Chile"></option>
+                            <option value="Uruguay"></option>
+                            <option value="Bolivia"></option>
+                            <option value="Paraguay"></option>
+                            <option value="Otros"></option>
+                        </datalist>
+
+                        <p class="text-form">
+                            Por favor, indica los sintomas que presentas:
+                        </p>
+                        <br />
+                        <span>(*) ¿Tuviste fiebre mayor a 38 grados?</span>
+                        <input
+                            type="radio"
+                            name="fiebre"
+                            id="fiebreTrue"
+                            value="true"
+                            class="checkarValor validarCheck"
+                        />
+                        <label for="fiebreTrue">Si</label>
+                        <input
+                            type="radio"
+                            name="fiebre"
+                            id="fiebreFalse"
+                            value="false"
+                            class="validarCheck"
+                        />
+                        <label for="fiebreFalse">No</label
+                        ><span
+                            class="errorMessage"
+                            id="errorCheckedFiebre"
+                        ></span
+                        ><br />
+
+                        <span>(*) ¿Tuviste dolor de cabeza?</span>
+                        <input
+                            type="radio"
+                            name="dolorCabeza"
+                            id="dolorCabezaTrue"
+                            value="true"
+                            class="checkarValor validarCheck"
+                        />
+                        <label for="dolorCabezaTrue">Si</label>
+                        <input
+                            type="radio"
+                            name="dolorCabeza"
+                            id="dolorCabezaFalse"
+                            value="false"
+                            class="validarCheck"
+                        />
+                        <label for="dolorCabezaFalse">No</label
+                        ><span
+                            class="errorMessage"
+                            id="errorCheckedDolorCabeza"
+                        ></span
+                        ><br />
+
+                        <span>(*) ¿Tuviste una tos persistente?</span>
+                        <input
+                            type="radio"
+                            name="tos"
+                            id="tosTrue"
+                            value="true"
+                            class="checkarValor validarCheck"
+                        />
+                        <label for="tosTrue">Si</label>
+                        <input
+                            type="radio"
+                            name="tos"
+                            id="tosFalse"
+                            value="false"
+                            class="validarCheck"
+                        />
+                        <label for="tosFalse">No</label
+                        ><span class="errorMessage" id="errorCheckedTos"></span
+                        ><br />
+
+                        <span>(*) ¿Tuviste dolor de garganta?</span>
+                        <input
+                            type="radio"
+                            name="dolorGarganta"
+                            id="dolorGargantaTrue"
+                            value="true"
+                            class="checkarValor validarCheck"
+                        />
+                        <label for="dolorGargantaTrue">Si</label>
+                        <input
+                            type="radio"
+                            name="dolorGarganta"
+                            id="dolorGargantaFalse"
+                            value="false"
+                            class="validarCheck"
+                        />
+                        <label for="dolorGargantaFalse">No</label
+                        ><span
+                            class="errorMessage"
+                            id="errorCheckedDolorGaraganta"
+                        ></span
+                        ><br />
+
+                        <span>(*) ¿Tuviste dificultad para respirar?</span>
+                        <input
+                            type="radio"
+                            name="dificultadRespirar"
+                            id="dificultadRespirarTrue"
+                            value="true"
+                            class="checkarValor validarCheck"
+                            onchange="mostarCampo('address', 'address')"
+                        />
+                        <label for="dificultadRespirarTrue">Si</label>
+                        <input
+                            type="radio"
+                            name="dificultadRespirar"
+                            id="dificultadRespirarFalse"
+                            value="false"
+                            class="validarCheck"
+                            onchange="ocultarCampo('address', 'address')"
+                        />
+                        <label for="dificultadRespirarFalse">No</label
+                        ><span
+                            class="errorMessage"
+                            id="errorCheckedRespirar"
+                        ></span
+                        ><br />
+                        <br />
+
+                        <label for="address" class="form-label ocultar"
+                            >(*) Direcci&oacute;n</label
+                        ><br />
+                        <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            autocomplete="off"
+                            class="input-100 ocultar campoParaVaciar"
+                        /><br /><br />
+
+                        <div class="boton-enviar">
+                            <input type="submit" value="ENVIAR TEST" />
+                        </div>
+                    </form>
+                </article>
+            </section>
+            <section class="precauciones-content">
+                <article class="detail-subtitle">
+                    <h3>medidas de precauci&oacute;n</h3>
+                </article>
+                <article class="precauciones-primer-fila">
+                    <div>
+                        <img
+                            src="./img/14-lavarse-manos.png"
+                            alt="lavarse-manos"
+                        />
+                        <img src="./img/16-tocar-nariz.png" alt="tocar-nariz" />
+                        <img
+                            src="./img/15-estornudar.png"
+                            alt="estornudar-codo"
+                        />
+                        <img
+                            src="./img/17-ventilar.png"
+                            alt="ventilar-ambientes-cerrados"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="./img/18-limpiar-objetos.png"
+                            alt="limpiar-objetos"
+                        />
+                        <img
+                            src="./img/20-reducir-contacto.png"
+                            alt="reducir-contacto"
+                        />
+                        <img
+                            src="./img/19-permanecer-domicilio.png"
+                            alt="quedate-en-casa"
+                        />
+                        <img
+                            src="./img/21-no-compartir-mate.png"
+                            alt="no-compartir-mate"
+                        />
+                    </div>
+                </article>
+            </section>
+            <section class="img-text-content">
+                <article class="detail-subtitle">
+                    <h3>
+                        hospital m&aacute;s cercano especializado en la
+                        enfermedad
+                    </h3>
+                </article>
+                <article class="two-col">
+                    <h4>HOSPITAL PIROVANO</h4>
+                    <ul class="hospital-datos">
+                        <li>
+                            <i class="fas fa-phone-square-alt"></i>
+                            +54-114546-4300
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> Av. Monroe
+                            3555, CABA
+                        </li>
+                        <li><i class="fas fa-city"></i> Buenos Aires, CABA</li>
+                    </ul>
+                </article>
+                <article class="two-col">
+                    <figure>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13142.207367246363!2d-58.479820030224616!3d-34.5649008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb67d776e79c9%3A0xe8722cf090719409!2sHospital%20Pirovano!5e0!3m2!1ses!2sar!4v1601431387743!5m2!1ses!2sar"
+                            frameborder="0"
+                            style="border: 0"
+                            allowfullscreen=""
+                            aria-hidden="false"
+                            tabindex="0"
+                        ></iframe>
+                    </figure>
+                </article>
+            </section>
+            <a href="#inicio" class="arriba"></a>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h5 class="footer-title">Datos del Grupo</h5>
+                    <p>Ezequiel Panigazzi - 38.695.636</p>
+                    <p>Lucas Zacarias - 42.436.419</p>
+                    <p>Julian Castro - 39.347.169</p>
+                </div>
+                <div class="footer-center">
+                    <h5 class="footer-title">Nombre inferior</h5>
+                    <ul>
+                        <li>
+                            <a href="listado-enfermedades.html">Enfermedades</a>
+                        </li>
+                        <li>
+                            <a href="vacunas.html">Vacunas</a>
+                        </li>
+                        <li>
+                            <a href="calendario.html">Calendario</a>
+                        </li>
+                        <li>
+                            <a href="mapa.html">Hospitales</a>
+                        </li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <h5 class="footer-title">Redes Sociales</h5>
+                    <a href="https://www.facebook.com/" target="_blank"
+                        ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a href="https://www.instagram.com/" target="_blank"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="https://www.twitter.com/" target="_blank"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                </div>
+            </div>
+        </footer>
+        <script src="js/detalle-enfermedades.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+/* slider */
+.slider-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+.slider-content img {
+    width: 100%;
+}
+
+/* pastillas */
+.pastilla-title {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+.pastilla-title h1 {
+    font-size: 3em;
+    font-weight: 600;
+}
+.pastillas-content {
+    display: block;
+}
+.pastillas-content div {
+    text-align: center;
+}
+.pastillas-img {
+    margin-top: 15%;
+    max-width: 50%;
+    cursor: pointer;
+}
+.pastillas-link-content {
+    margin: 50px 0;
+}
+.pastillas-link {
+    text-decoration: none;
+    border: 3px solid rgb(2 50 109);
+    padding: 10px 50px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 25px;
+    color: black;
+    transition: background 1s;
+}
+.pastillas-link:hover {
+    background: rgb(2 50 109);
+    color: white;
+}
+
+/* banner telefono */
+.banner-telefono div img {
+    width: 100%;
+    margin: 50px 0;
+}
+#banner-telefono-desktop {
+    display: none;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    /* pastillas */
+    .pastilla-title h1 {
+        font-size: 4em;
+    }
+    .pastillas-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .pastillas-content article {
+        text-align: center;
+        width: calc(50% - 10px);
+    }
+    .pastillas-img {
+        width: 70%;
+    }
+    /* slider */
+    .slider-content {
+        margin-top: 50px;
+    }
+    /* Banner telefono */
+    .banner-telefono div img {
+        margin: 60px 0;
+    }
+    #banner-telefono-mobile {
+        display: none;
+    }
+    #banner-telefono-desktop {
+        display: block;
+    }
+}
+
+/* ----------- FIN TABLET ----------------- */
+
+/* LAPTOP */
+@media screen and (min-width: 1024px) {
+    /* pastillas */
+    .pastillas-img {
+        width: 60%;
+    }
+    .pastillas-content {
+        flex-wrap: nowrap;
+    }
+    .pastillas-content article {
+        width: calc(25% - 10px);
+    }
+    /* Banner telefono */
+    .banner-telefono div img {
+        margin: 80px 0;
+    }
+}
+
+/* ----------- FIN LAPTOP ----------------- */
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    .slider-content img {
+        width: 50%;
+        margin: auto;
+    }
+    /* pastillas */
+    .pastilla-title h1 {
+        font-size: 6em;
+    }
+    .pastilla-title h4 {
+        font-size: 2em;
+    }
+    .pastillas-img {
+        max-width: 55%;
+    }
+    /* Banner telefono */
+    .banner-telefono div img {
+        margin: 110px 0;
+    }
+}
